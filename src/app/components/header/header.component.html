@@ -1,0 +1,14 @@
+<nav class="menu">
+  <ul>
+    <li><a routerLink="/posts">Posts</a></li>
+    <li><a routerLink="/posts">Posts</a></li>
+    <li><a routerLink="/posts">Posts</a></li>
+    <li class="spacer"></li>
+    <ng-container *ngIf="!isAuthenticated">
+      <li><a routerLink="/login">Login</a></li>
+    </ng-container>
+    <ng-container *ngIf="isAuthenticated">
+      <li (click)="logout()"><a href="">Logout</a></li>
+    </ng-container>
+  </ul>
+</nav>

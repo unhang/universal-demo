@@ -1,0 +1,32 @@
+
+.menu {
+  display: block;
+  height: 3rem;
+  background-color: rgb(214, 214, 241);
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 10rem;
+}
+
+.menu ul li {
+  box-sizing: border-box;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+}
+
+.menu ul li a {
+  text-decoration: none;
+}
+
+.menu ul li a:visited {
+  color: black;
+}
+
+.spacer {
+  flex-grow: 1;
+}
