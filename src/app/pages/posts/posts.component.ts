@@ -14,7 +14,6 @@ export class PostsComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     console.log("get POSTS");
-    // console.log(window.innerWidth)
     this.httpClient
       .get("https://jsonplaceholder.typicode.com/posts")
       .subscribe((data: any[]) => (this.data = data));

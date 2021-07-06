@@ -1,9 +1,16 @@
-import { AuthState } from "./auth.reducer"
+import { AuthState } from "./auth.reducer";
 
-export * from "./auth.actions"
-export * from "./auth.reducer"
-export * from "./auth.selectors"
+export * from "./auth.actions";
+export * from "./auth.reducer";
+export * from "./auth.selectors";
 
 export interface AppState {
-  auth: AuthState
+  auth: AuthState;
+}
+
+export interface Post {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 }

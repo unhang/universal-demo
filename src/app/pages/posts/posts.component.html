@@ -3,7 +3,7 @@
 <ng-container *ngIf="data.length > 0; else loading">
   <div *ngFor="let item of data">
     <h4>
-      <a [routerLink]="['/post', item.id]">{{ item.title }}</a>
+      <a [routerLink]="['/posts', item.id]">{{ item.title }}</a>
     </h4>
     <p>{{ item.body }}</p>
   </div>

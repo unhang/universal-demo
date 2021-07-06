@@ -5,8 +5,6 @@ import { StoreModule } from "@ngrx/store";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
-import { PostsComponent } from "./components/posts/posts.component";
-import { PostComponent } from "./components/post/post.component";
 import { HomeComponent } from "./components/home/home.component";
 import { HeaderComponent } from "./components/header/header.component";
 
@@ -16,8 +14,6 @@ import { AppState } from "./store";
 @NgModule({
   declarations: [
     AppComponent,
-    PostsComponent,
-    PostComponent,
     HomeComponent,
     HeaderComponent,
   ],

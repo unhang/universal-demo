@@ -1,7 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { AfterViewInit, Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { Observable } from "rxjs";
 
 @Component({
   selector: "app-post",
@@ -9,20 +8,21 @@ import { Observable } from "rxjs";
   styleUrls: ["./post.component.css"]
 })
 export class PostComponent implements OnInit, AfterViewInit {
-  public id: string;
+  public id = this.route.snapshot.params["id"];
+
   // public item: Observable<any>;
   public item: any;
 
-  constructor(private route: ActivatedRoute, private httpClient: HttpClient) {
-    this.id = this.route.snapshot.params["id"];
-  }
+  constructor(private route: ActivatedRoute, private http: HttpClient) {}
 
   ngOnInit(): void {}
 
   ngAfterViewInit() {
-    console.log("get POST detail");
-    this.httpClient
+    this.http
       .get(`https://jsonplaceholder.typicode.com/posts/${this.id}`)
-      .subscribe((item) => (this.item = item));
+      .subscribe((item) => {
+        console.log("FETCHED ITEM")
+        this.item = item
+      });
   }
 }
